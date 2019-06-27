@@ -1,0 +1,265 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap&subset=latin-ext"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css"
+    />
+    <title>Document</title>
+    <style>
+      *,
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Lato", sans-serif;
+        color: #333;
+      }
+      .content {
+        max-width: 1300px;
+        margin: 0 auto;
+      }
+      header {
+        position: sticky;
+        height: 100px;
+        width: 100%;
+        box-shadow: 0px 4px 22px -7px rgba(0, 0, 0, 0.43);
+      }
+      .navigation {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        padding: 0 20px;
+      }
+      .logo {
+        display: flex;
+        align-items: center;
+      }
+      .logo__img {
+        border-radius: 50%;
+        width: 68px;
+        height: 68px;
+        background-image: url("./profilowe.png");
+        background-size: cover;
+        margin-right: 10px;
+      }
+      .logo__title {
+        font-size: 30px;
+        letter-spacing: 0.7px;
+      }
+      .links {
+        display: flex;
+        list-style: none;
+      }
+      .links__nav-link {
+        text-decoration: none;
+        margin-left: 60px;
+        font-size: 18px;
+        letter-spacing: 0.2px;
+
+        padding-top: 10px;
+        position: relative;
+        color: inherit;
+        text-decoration: none;
+        line-height: 24px;
+      }
+      .links__nav-link:before,
+      .links__nav-link:after {
+        content: "";
+        position: absolute;
+        transition: transform 0.3s ease;
+      }
+      .links__nav-link::before {
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        background: #2a4e98;
+        transform: scaleX(0);
+      }
+      .links__nav-link:hover::before {
+        transform: scaleX(1);
+      }
+      .home {
+        height: 80vh;
+        background: #fbfbfb;
+        width: 100%;
+      }
+      .home .content {
+        display: flex;
+        align-items: center;
+        height: 100%;
+      }
+      .home__col {
+        width: 100%;
+      }
+      .home__col--left {
+      }
+      .home__col--right {
+      }
+      .img {
+        background-image: url("./icon1.png");
+        height: 500px;
+        width: 500px;
+        margin: 0 auto;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .home__title {
+        font-size: 50px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        margin-bottom: 40px;
+      }
+      .home__title--bg {
+        background-color: #ffecb4;
+        background-color: #fed375;
+      }
+      .home__subtitle {
+        font-size: 28px;
+        letter-spacing: 1px;
+        margin: 40px 0;
+      }
+      .home__contact-link {
+        background: #2a4e98;
+        color: #fff;
+        margin-top: 30px;
+        padding: 13px 27px;
+        font-size: 25px;
+        text-decoration: none;
+        transition: all 0.4s;
+        border-radius: 4px;
+      }
+      .home__contact-link-icon {
+        color: #eee;
+      }
+      .home__contact-link:hover {
+        background: rgb(51, 96, 160);
+      }
+      .arrow-container {
+        position: relative;
+        width: 100%;
+        height: 1px;
+      }
+      .arrow-down {
+        font-size: 45px;
+        color: grey;
+        position: absolute;
+        z-index: 5;
+        left: 50%;
+        top: 0%;
+        transform: translate(-50%, -50%);
+        animation: ticking 0.9s infinite ease-in-out;
+      }
+      @keyframes ticking {
+        0% {
+          top: 0px;
+        }
+        50% {
+          top: 10px;
+        }
+        100% {
+          top: 0px;
+        }
+      }
+      .projects {
+        background: #f7f7f7;
+        height: 60vh;
+        width: 100%;
+      }
+
+      .img2 {
+        background-image: url("./person.png");
+        height: 500px;
+        width: 600px;
+        margin: 0 auto;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="content navigation">
+        <div class="logo">
+          <span class="logo__img"></span>
+          <h2 class="logo__title">Szymon Oleszek</h2>
+        </div>
+        <ul class="links">
+          <li>
+            <a class="links__nav-link" href="#">
+              Home
+            </a>
+          </li>
+          <li>
+            <a class="links__nav-link" href="#">
+              Projects
+            </a>
+          </li>
+          <li>
+            <a class="links__nav-link" href="#">
+              About Me
+            </a>
+          </li>
+          <li>
+            <a class="links__nav-link" href="#">
+              Contact
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="home" class="home">
+        <div class="content">
+          <div class="home__col home__col--left">
+            <h1 class="home__title">
+              Hi, I'm <span class="home__title--bg">Front-end</span> developer!
+            </h1>
+            <p class="home__subtitle">
+              I put emphasis on usagefull of my apps also UX and nice UI.
+              Constantly look for posiblities to develop myself!
+            </p>
+            <a href="#" class="home__contact-link"
+              >Let's talk!
+              <span class="home__contact-link-icon far fa-comment-alt"></span
+            ></a>
+          </div>
+          <div class="home__col home__col--right">
+            <div class="img"></div>
+          </div>
+        </div>
+      </section>
+      <div class="arrow-container">
+        <span class="arrow-down fas fa-arrow-alt-circle-down"></span>
+      </div>
+      <section id="projects" class="projects ">
+        <div class="content">
+          <div class="home__col home__col--left">
+            <div class="img2"></div>
+          </div>
+          <div class="home__col home__col--right">
+            <h3>
+              I am working currently as a Front-end developer at Polsource
+            </h3>
+            <p>I have experience with creating buissness interfaces</p>
+            <p>
+              I was working for company such like <b>AMD</b>, <b>Radius</b> or
+              <b>DFE Pharma</b>
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="aboutMe" class="aboutMe "></section>
+      <section id="contact" class="contact "></section>
+    </main>
+    <footer class="content"></footer>
+  </body>
+</html>
