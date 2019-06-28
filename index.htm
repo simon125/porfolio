@@ -4,6 +4,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link
+      rel="stylesheet"
+      href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css"
+    />
+    <link
       href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap&subset=latin-ext"
       rel="stylesheet"
     />
@@ -11,239 +15,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css"
     />
-
-    <title>Document</title>
-    <style>
-      *,
-      body {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: "Lato", sans-serif;
-        color: #333;
-      }
-      .content {
-        max-width: 1300px;
-        margin: 0 auto;
-      }
-      header {
-        position: sticky;
-        /* background: #fff;
-        top: 0;
-        left: 0; */
-        height: 100px;
-        width: 100%;
-        box-shadow: 0px 4px 22px -7px rgba(0, 0, 0, 0.43);
-      }
-      .navigation {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 100%;
-        padding: 0 20px;
-      }
-      .logo {
-        display: flex;
-        align-items: center;
-      }
-      .logo__img {
-        border-radius: 50%;
-        width: 68px;
-        height: 68px;
-        background-image: url("./profilowe.png");
-        background-size: cover;
-        margin-right: 10px;
-      }
-      .logo__title {
-        font-size: 30px;
-        letter-spacing: 0.7px;
-      }
-      .links {
-        display: flex;
-        list-style: none;
-      }
-      .links__nav-link {
-        text-decoration: none;
-        margin-left: 60px;
-        font-size: 18px;
-        letter-spacing: 0.2px;
-
-        padding-top: 10px;
-        position: relative;
-        color: inherit;
-        text-decoration: none;
-        line-height: 24px;
-      }
-      .links__nav-link:before,
-      .links__nav-link:after {
-        content: "";
-        position: absolute;
-        transition: transform 0.3s ease;
-      }
-      .links__nav-link::before {
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        height: 2px;
-        background: #2a4e98;
-        transform: scaleX(0);
-      }
-      .links__nav-link:hover::before {
-        transform: scaleX(1);
-      }
-      .home {
-        height: 80vh;
-        background: #fbfbfb;
-        width: 100%;
-      }
-      .home .content,
-      .projects .content,
-      .projects-list .content {
-        display: flex;
-        align-items: center;
-        height: 100%;
-      }
-      .section__col {
-        width: 100%;
-      }
-      .home__col--left {
-      }
-      .home__col--right {
-      }
-      .img {
-        background-image: url("./icon1.png");
-        height: 500px;
-        width: 500px;
-        margin: 0 auto;
-        background-size: cover;
-        background-repeat: no-repeat;
-      }
-      .home__title {
-        font-size: 50px;
-        font-weight: bold;
-        letter-spacing: 1px;
-        margin-bottom: 40px;
-      }
-      .home__title--bg {
-        background-color: #ffecb4;
-        background-color: #fed375;
-      }
-      .home__subtitle {
-        font-size: 28px;
-        letter-spacing: 1px;
-        margin: 40px 0;
-      }
-      .home__contact-link {
-        background: #2a4e98;
-        color: #fff;
-        margin-top: 30px;
-        padding: 13px 27px;
-        font-size: 25px;
-        text-decoration: none;
-        transition: all 0.4s;
-        border-radius: 4px;
-      }
-      .home__contact-link-icon {
-        color: #eee;
-      }
-      .home__contact-link:hover {
-        background: rgb(51, 96, 160);
-      }
-      .arrow-container {
-        position: relative;
-        width: 100%;
-        height: 1px;
-      }
-      .arrow-down {
-        font-size: 45px;
-        color: grey;
-        position: absolute;
-        z-index: 5;
-        left: 50%;
-        top: 0%;
-        transform: translate(-50%, -50%);
-        animation: ticking 0.9s infinite ease-in-out;
-      }
-      @keyframes ticking {
-        0% {
-          top: 0px;
-        }
-        50% {
-          top: 10px;
-        }
-        100% {
-          top: 0px;
-        }
-      }
-      .projects {
-        background: #f7f7f7;
-
-        /* background: lightskyblue; */
-        min-height: 60vh;
-        width: 100%;
-      }
-      .projects-title {
-        font-size: 25px;
-        line-height: 1.4;
-        letter-spacing: 0.3px;
-
-        padding-left: 10px;
-      }
-      .projects-details {
-        font-size: 21px;
-        margin-top: 10px;
-        letter-spacing: 0.3px;
-      }
-      .border-bottom {
-        margin-bottom: 50px;
-      }
-
-      .img2 {
-        background-image: url("./person.png");
-        height: 500px;
-        width: 600px;
-        margin: 0 auto;
-        background-size: cover;
-        background-repeat: no-repeat;
-      }
-      .aboutMe {
-        background: #2a4e98;
-        height: 180px;
-        position: relative;
-        box-shadow: 0px 0px 23px -1px rgba(0, 0, 0, 0.75);
-        z-index: 4;
-      }
-      .sample-projects__header {
-        font-size: 38px;
-        letter-spacing: 0.4px;
-        color: #eee;
-        text-align: center;
-        line-height: 180px;
-      }
-      .projects-list {
-        min-height: 50vh;
-        background: #fefefe;
-      }
-      .img3 {
-        background-image: url("./170editedGood.png");
-        height: 500px;
-        width: 600px;
-        margin: 0 auto;
-        background-size: cover;
-        background-repeat: no-repeat;
-      }
-      .back-arrow {
-        position: fixed;
-        bottom: 50px;
-        right: 50px;
-        color: #f1ac15;
-        z-index: 10;
-        transition: all 0.3s;
-      }
-      .back-arrow:hover {
-        transform: scale(1.15);
-      }
-    </style>
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Szymon Oleszek</title>
   </head>
   <body>
     <header>
@@ -293,28 +66,34 @@
             ></a>
           </div>
           <div class="section__col home__col--right">
-            <div class="img"></div>
+            <div class="home__img"></div>
           </div>
         </div>
       </section>
       <div class="arrow-container">
         <span class="arrow-down fas fa-arrow-alt-circle-down"></span>
       </div>
-      <section id="projects" class="projects ">
+      <section id="aboutMe" class="about-me">
         <div class="content">
-          <div class="section__col home__col--left">
-            <div class="img2"></div>
+          <div class="section__col">
+            <div class="about__img"></div>
           </div>
-          <div class="section__col home__col--right">
-            <p class="projects-title border-bottom">
+          <div class="section__col">
+            <p class="about-me__content">
               Mechatronics engiennier addicted to creating things, begien from
               creting and programming
-              <a href="https://www.youtube.com/?gl=PL&hl=pl" target="_blank"
-                >robots </a
-              >robots, trough programmable microcontroller devices to coding web
-              apps and web sites. Big fun of ReactJS.
+              <a
+                class="about-me__robot-link"
+                href="https://www.youtube.com/?gl=PL&hl=pl"
+                target="_blank"
+                title="Youtube link to documentary film"
+              >
+                robots
+              </a>
+              , trough programmable microcontroller devices to coding web apps
+              and web sites. Big fun of ReactJS.
             </p>
-            <p class="projects-title">
+            <p class="about-me__content">
               Currently I am working as a Front-end developer at Polsource in
               Lublin. I have experience with creating business interfaces, I was
               working on projects for companies such like <b>AMD</b>,
@@ -324,105 +103,232 @@
           </div>
         </div>
       </section>
-      <section id="aboutMe" class="aboutMe ">
+      <section id="projectsHeader" class="projects-header">
         <h3 class="sample-projects__header">My projects samples</h3>
       </section>
-      <section id="contact" class="projects-list">
+      <section id="projectsList" class="projects-list project-1">
         <div class="content">
-          <div class="section__col home__col--left">
-            <div class="img3"></div>
+          <div class="section__col">
+            <div class="project-mockup"></div>
           </div>
-          <div class="section__col home__col--right">
-            <h3>Bill tracker</h3>
-            <p>
+          <div class="section__col section__col--details">
+            <h2 class="projects-list__project-name">Bill tracker</h2>
+            <p class="projects-list__project-description">
               Web application for storing bills, managing them and tracing them.
               App allows and help to get know everything about your spending
               monay habits!
             </p>
-            <p>
+            <p class="projects-list__project-description">
               You can easyli add bills with or without specific information -
               its up to You, also You can delete or edit exisitng bills. You can
               watch your weekly monthly and yearly stats. Whole data is stored
               in databse.
             </p>
-            <h4>Used technology and tools</h4>
-            <ul>
-              <li>ReactJS</li>
-              <li>Redux</li>
-              <li>MaterialUI</li>
-              <li>Firebase</li>
-              <li>NPM</li>
-              <li>Git</li>
-            </ul>
+            <h4 class="projects-list__project-tech">
+              Used technology and tools
+            </h4>
+            <div class="projects-list__tech-and-links--wrapper">
+              <table class="projects-list__tech-list">
+                <!-- <li>
+                  <i class="devicon-javascript-plain colored"></i> JavaScript
+                </li> -->
+                <tbody>
+                  <tr>
+                    <td>React</td>
+                    <td class="td-icon">
+                      <span class="fab fa-react icon-react fa-lg" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Redux</td>
+                    <td class="td-icon">
+                      <img src="./images/redux.png" height="25" width="25" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>MaterialUI</td>
+                    <td class="td-icon"><img src="./images/material-ui.png" height="25" width="25" /></td>
+                  </tr>
+                  <tr>
+                    <td>Firebase</td>
+                    <td class="td-icon"><img src="./images/firebase.png" height="25" width="25" /></td>
+                  </tr>
+                  <tr>
+                    <td>NPM</td>
+                    <td class="td-icon"><span class="fab fa-npm icon-npm fa-lg" /></td>
+                  </tr>
+                  <tr>
+                    <td>Git</td>
+                    <td class="td-icon"><span class="fab fa-git-square icon-git fa-lg" /></td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="projects-list__links-group">
+                <a class="projects-list__project-link" href="#">
+                  Code
+                </a>
+                <a class="projects-list__project-link" href="#">
+                  Live
+                </a>
+              </div>
+            </div>
           </div>
-          <button>Code</button><button>Live</button>
         </div>
-      </section>
-      <section id="contact" class="projects-list">
-        <div class="content">
-          <div class="section__col home__col--right">
-            <h3>Mental math gym</h3>
-            <p>
-              Web application for storing bills, managing them and tracing them.
-              App allows and help to get know everything about your spending
-              monay habits!
-            </p>
-            <p>
-              You can easyli add bills with or without specific information -
-              its up to You, also You can delete or edit exisitng bills. You can
-              watch your weekly monthly and yearly stats. Whole data is stored
-              in databse.
-            </p>
-            <h4>Used technology and tools</h4>
-            <ul>
-              <li>ReactJS</li>
-              <li>Redux</li>
-              <li>SCSS</li>
-              <li>Firebase</li>
-              <li>NPM</li>
-              <li>Git</li>
-            </ul>
-          </div>
-          <button>Code</button><button>Live</button>
-          <div class="section__col home__col--left">
-            <div class="img3"></div>
+</section>
+<!-- PROJECT 2 START -->
+  <section id="projectsList" class="projects-list project-2">
+    <div class="content">
+      <div class="section__col">
+        <div class="project-mockup"></div>
+      </div>
+      <div class="section__col section__col--details">
+        <h2 class="projects-list__project-name">Mental math gym</h2>
+        <p class="projects-list__project-description">
+          Web application for training your mind, thinging speed and math skills. 
+          By exercising trough app you will see first effects very quickly!
+        </p>
+        <p class="projects-list__project-description">
+          App gives you possiblities to practise mental math, it has option to configure level of difficulty. 
+          You can easyli creat account and track your progress and get achievments! My students are very happy of this app!
+        </p>
+        <h4 class="projects-list__project-tech">
+          Used technology and tools
+        </h4>
+        <div class="projects-list__tech-and-links--wrapper">
+          <table class="projects-list__tech-list">
+            <tbody>
+              <tr>
+                <td>React</td>
+                <td class="td-icon">
+                  <span class="fab fa-react icon-react fa-lg" />
+                </td>
+              </tr>
+              <tr>
+                <td>Redux</td>
+                <td class="td-icon">
+                  <img src="./images/redux.png" height="25" width="25" />
+                </td>
+              </tr>
+              <tr>
+                <td>MaterialUI</td>
+                <td class="td-icon"><img src="./images/material-ui.png" height="25" width="25" /></td>
+              </tr>
+              <tr>
+                <td>Firebase</td>
+                <td class="td-icon"><img src="./images/firebase.png" height="25" width="25" /></td>
+              </tr>
+              <tr>
+                <td>NPM</td>
+                <td class="td-icon"><span class="fab fa-npm icon-npm fa-lg" /></td>
+              </tr>
+              <tr>
+                <td>Git</td>
+                <td class="td-icon"><span class="fab fa-git-square icon-git fa-lg" /></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="projects-list__links-group">
+            <a class="projects-list__project-link" href="#">
+              Code
+            </a>
+            <a class="projects-list__project-link" href="#">
+              Live
+            </a>
           </div>
         </div>
-      </section>
-      <section id="contact" class="projects-list">
-        <div class="content">
-          <div class="section__col home__col--left">
-            <div class="img3"></div>
-          </div>
-          <div class="section__col home__col--right">
-            <h3>Google keep clone</h3>
-            <p>
-              Web application for storing bills, managing them and tracing them.
-              App allows and help to get know everything about your spending
-              monay habits!
-            </p>
-            <p>
-              You can easyli add bills with or without specific information -
-              its up to You, also You can delete or edit exisitng bills. You can
-              watch your weekly monthly and yearly stats. Whole data is stored
-              in databse.
-            </p>
-            <h4>Used technology and tools</h4>
-            <ul>
-              <li>ReactJS</li>
-              <li>Redux</li>
-              <li>Styled components</li>
-              <li>Firebase</li>
-              <li>NPM</li>
-              <li>Git</li>
-            </ul>
-          </div>
-          <button>Code</button><button>Live</button>
+      </div>
+    </div>
+  </section>
+  <!-- PROJECT 2 END -->
+  <!-- PROJECT 3 START -->
+    <section class="projects-list project-3">
+      <div class="content">
+        <div class="section__col">
+          <div class="project-mockup"></div>
         </div>
-      </section>
+        <div class="section__col section__col--details">
+          <h2 class="projects-list__project-name">Google keep clone</h2>
+          <p class="projects-list__project-description">
+            App is copy of well known application from google. It is used for crating notes, lists etc.
+            Properly and consistently using of this app definitly increase daily productivity.  
+          </p>
+          <p class="projects-list__project-description">
+            
+          </p>
+          <h4 class="projects-list__project-tech">
+            Used technology and tools
+          </h4>
+          <div class="projects-list__tech-and-links--wrapper">
+            <table class="projects-list__tech-list">
+              <tbody>
+                <tr>
+                  <td>React</td>
+                  <td class="td-icon">
+                    <span class="fab fa-react icon-react fa-lg" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>Redux</td>
+                  <td class="td-icon">
+                    <img src="./images/redux.png" height="25" width="25" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>MaterialUI</td>
+                  <td class="td-icon"><img src="./images/material-ui.png" height="25" width="25" /></td>
+                </tr>
+                <tr>
+                  <td>Firebase</td>
+                  <td class="td-icon"><img src="./images/firebase.png" height="25" width="25" /></td>
+                </tr>
+                <tr>
+                  <td>NPM</td>
+                  <td class="td-icon"><span class="fab fa-npm icon-npm fa-lg" /></td>
+                </tr>
+                <tr>
+                  <td>Git</td>
+                  <td class="td-icon"><span class="fab fa-git-square icon-git fa-lg" /></td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="projects-list__links-group">
+              <a class="projects-list__project-link" href="#">
+                Code
+              </a>
+              <a class="projects-list__project-link" href="#">
+                Live
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  <!-- PROJECT 3 END -->
+  <section id="projectsHeader" class="projects-header">
+    <h3 class="sample-projects__header">Contact with me!</h3>
+  </section>
+  <section id="contact" class="contact">
+    <div class="content">
+      
+      <div class="section__col">
+        <h2 class="contact__header">You can easyli do it trough email</h2>
+        <h3 class="contact__email"> szymqwerty@gmail.com</h3>
+        <h2  class="contact__header">or my socials</h2>
+        <h3 class="contact__social-icons">
+          <span class="fab fa-linkedin fa-3x icon-linkedin"/>
+          <span class="fab fa-facebook-messenger icon-messanger"/>
+        </h3>
+      </div>
+    </div>
+  </section>
     </main>
     <span class="far fa-caret-square-up back-arrow fa-3x"></span>
-    <footer class="content">
+    <footer>
+      <div class="content">
+        <p>&#9400; 2019 Szymon Oleszek All Rights Reserved</p>
+        <p>Portfolio made with <span class="fas fa-heart fa-lg icon-heart"/></p>
+
+      </div>
       <!-- <a
         style="width: 0px; height: 0px;"
         href="https://pl.freepik.com/darmowe-zdjecie-wektory/biznes"

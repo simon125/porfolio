@@ -1,0 +1,363 @@
+*,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  color: #333;
+}
+.content {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+header {
+  position: sticky;
+  /* background: #fff;
+        top: 0;
+        left: 0; */
+  height: 100px;
+  width: 100%;
+  box-shadow: 0px 4px 22px -7px rgba(0, 0, 0, 0.43);
+}
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 0 20px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+}
+.logo__img {
+  border-radius: 50%;
+  width: 68px;
+  height: 68px;
+  background-image: url("../images/profile.png");
+  background-size: cover;
+  margin-right: 10px;
+}
+.logo__title {
+  font-size: 30px;
+  letter-spacing: 0.7px;
+}
+.links {
+  display: flex;
+  list-style: none;
+}
+.links__nav-link {
+  text-decoration: none;
+  margin-left: 60px;
+  font-size: 18px;
+  letter-spacing: 0.2px;
+
+  padding-top: 10px;
+  position: relative;
+  color: inherit;
+  text-decoration: none;
+  line-height: 24px;
+}
+.links__nav-link:before,
+.links__nav-link:after {
+  content: "";
+  position: absolute;
+  transition: transform 0.3s ease;
+}
+.links__nav-link::before {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: #2a4e98;
+  transform: scaleX(0);
+}
+.links__nav-link:hover::before {
+  transform: scaleX(1);
+}
+.home {
+  height: 80vh;
+  background: #fbfbfb;
+  width: 100%;
+}
+.home .content,
+.about-me .content,
+.projects-list .content {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.about-me .content {
+  height: 85%;
+}
+.projects-list .content {
+  height: 80%;
+}
+.section__col {
+  width: 100%;
+  margin: 0 20px;
+}
+.section__col--details {
+  margin-top: 50px;
+}
+.home__img {
+  background-image: url("../images/home-picture.png");
+  height: 500px;
+  width: 500px;
+  margin: 0 auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.home__title {
+  font-size: 50px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 40px;
+}
+.home__title--bg {
+  background-color: #ffecb4;
+  background-color: #fed375;
+}
+.home__subtitle {
+  font-size: 28px;
+  letter-spacing: 1px;
+  margin: 40px 0;
+}
+.home__contact-link {
+  background: #2a4e98;
+  color: #fff;
+  margin-top: 30px;
+  padding: 13px 27px;
+  font-size: 25px;
+  text-decoration: none;
+  transition: all 0.4s;
+  border-radius: 4px;
+}
+.home__contact-link-icon {
+  color: #eee;
+}
+.home__contact-link:hover {
+  background: rgb(51, 96, 160);
+}
+.arrow-container {
+  position: relative;
+  width: 100%;
+  height: 1px;
+}
+.arrow-down {
+  font-size: 45px;
+  color: #5785c3;
+  position: absolute;
+  z-index: 5;
+  left: 50%;
+  top: 0%;
+  transform: translate(-50%, -50%);
+  animation: ticking 0.9s infinite ease-in-out;
+}
+@keyframes ticking {
+  0% {
+    top: 0px;
+  }
+  50% {
+    top: 10px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+
+.about-me__content {
+  font-size: 25px;
+  line-height: 1.4;
+  letter-spacing: 0.3px;
+  padding-left: 10px;
+  margin: 50px 0;
+}
+.about-me__robot-link {
+  color: #2a4e98;
+  font-weight: bold;
+}
+.about__img {
+  background-image: url("../images/person.png");
+  height: 500px;
+  width: 600px;
+  margin: 0 auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.projects {
+  background: #f7f7f7;
+  min-height: 60vh;
+  width: 100%;
+}
+.projects-details {
+  font-size: 21px;
+  margin-top: 10px;
+  letter-spacing: 0.3px;
+}
+.projects-header {
+  background: #2a4e98;
+  height: 180px;
+  position: relative;
+  box-shadow: 0px 0px 23px -1px rgba(0, 0, 0, 0.75);
+  z-index: 4;
+}
+.sample-projects__header {
+  font-size: 38px;
+  letter-spacing: 0.4px;
+  color: #eee;
+  text-align: center;
+  line-height: 180px;
+}
+.projects-list {
+  min-height: 50vh;
+  background: #fefefe;
+}
+.projects-list__project-name,
+.projects-list__project-tech {
+  color: #2a4e98;
+}
+.projects-list__project-tech {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.projects-list__project-description {
+  margin: 16px 0;
+  letter-spacing: 0.2px;
+  font-size: 18px;
+  line-height: 1.3;
+}
+.projects-list__links-group {
+  display: flex;
+  align-self: flex-end;
+  margin-right: 15px;
+}
+.projects-list__project-link {
+  padding: 8px 0px;
+  margin: 0 7px;
+  width: 150px;
+  color: #2a4e98;
+  background: transparent;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 0.3px;
+  text-align: center;
+  text-transform: uppercase;
+  border: 3px solid #2a4e98;
+  border-radius: 4px;
+  text-decoration: none;
+}
+.projects-list__tech-and-links--wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.projects-list__tech-list {
+  list-style: none;
+}
+.projects-list__tech-list li {
+  letter-spacing: 0.4px;
+  font-size: 1.1em;
+}
+.project-mockup {
+  background-image: url("../images/mockup-screens.png");
+  height: 500px;
+  width: 600px;
+  margin: 0 auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.back-arrow {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  color: #f1ac15;
+  z-index: 10;
+  transition: all 0.3s;
+}
+.back-arrow:hover {
+  transform: scale(1.15);
+}
+.icon-redux {
+  background-image: url("../images/redux.png");
+  height: 300px;
+  width: 300px;
+}
+.icon-firebase {
+  background-image: url("../images/firebase.png");
+  height: 30px;
+  width: 30px;
+  z-index: 10;
+}
+.icon-material {
+  background-image: url("../images/material-ui.png");
+  height: 400px;
+  width: 400px;
+}
+.icon-react {
+  color: #00d8ff;
+}
+.icon-git {
+  color: #3e2c00;
+}
+.icon-npm {
+  color: #cc3534;
+}
+.icon-scss {
+}
+.icon-styled {
+}
+.icon-linkedin {
+  color: #0077b5;
+}
+.icon-messanger {
+  color: #0084ff;
+}
+.icon-heart {
+  color: red;
+}
+td {
+  padding: 2px 0;
+}
+.td-icon {
+  padding-left: 10px;
+  text-align: center;
+}
+.projects-list.project-2 {
+  background: #f7f7f7;
+}
+.contact {
+  padding: 50px 0;
+  background: #f7f7f7;
+}
+.contact__header,
+.contact__email,
+.contact__social-icons {
+  text-align: center;
+}
+.contact__header {
+  color: #2a4e98;
+  text-align: center;
+  margin: 20px 0;
+}
+.contact__email {
+  font-size: 30px;
+  letter-spacing: 0.5px;
+  color: #2a4e98;
+}
+.contact__social {
+  text-align: center;
+}
+footer {
+  height: 100px;
+  box-shadow: 0px 4px 22px -7px rgba(0, 0, 0, 0.43);
+}
+footer .content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+footer .content p {
+  color: #2a4e98;
+  margin: 10px 0;
+}
