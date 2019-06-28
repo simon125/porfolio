@@ -11,6 +11,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css"
     />
+
     <title>Document</title>
     <style>
       *,
@@ -27,6 +28,9 @@
       }
       header {
         position: sticky;
+        /* background: #fff;
+        top: 0;
+        left: 0; */
         height: 100px;
         width: 100%;
         box-shadow: 0px 4px 22px -7px rgba(0, 0, 0, 0.43);
@@ -92,12 +96,14 @@
         background: #fbfbfb;
         width: 100%;
       }
-      .home .content {
+      .home .content,
+      .projects .content,
+      .projects-list .content {
         display: flex;
         align-items: center;
         height: 100%;
       }
-      .home__col {
+      .section__col {
         width: 100%;
       }
       .home__col--left {
@@ -171,8 +177,25 @@
       }
       .projects {
         background: #f7f7f7;
-        height: 60vh;
+
+        /* background: lightskyblue; */
+        min-height: 60vh;
         width: 100%;
+      }
+      .projects-title {
+        font-size: 25px;
+        line-height: 1.4;
+        letter-spacing: 0.3px;
+
+        padding-left: 10px;
+      }
+      .projects-details {
+        font-size: 21px;
+        margin-top: 10px;
+        letter-spacing: 0.3px;
+      }
+      .border-bottom {
+        margin-bottom: 50px;
       }
 
       .img2 {
@@ -182,6 +205,43 @@
         margin: 0 auto;
         background-size: cover;
         background-repeat: no-repeat;
+      }
+      .aboutMe {
+        background: #2a4e98;
+        height: 180px;
+        position: relative;
+        box-shadow: 0px 0px 23px -1px rgba(0, 0, 0, 0.75);
+        z-index: 4;
+      }
+      .sample-projects__header {
+        font-size: 38px;
+        letter-spacing: 0.4px;
+        color: #eee;
+        text-align: center;
+        line-height: 180px;
+      }
+      .projects-list {
+        min-height: 50vh;
+        background: #fefefe;
+      }
+      .img3 {
+        background-image: url("./170editedGood.png");
+        height: 500px;
+        width: 600px;
+        margin: 0 auto;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .back-arrow {
+        position: fixed;
+        bottom: 50px;
+        right: 50px;
+        color: #f1ac15;
+        z-index: 10;
+        transition: all 0.3s;
+      }
+      .back-arrow:hover {
+        transform: scale(1.15);
       }
     </style>
   </head>
@@ -219,7 +279,7 @@
     <main>
       <section id="home" class="home">
         <div class="content">
-          <div class="home__col home__col--left">
+          <div class="section__col home__col--left">
             <h1 class="home__title">
               Hi, I'm <span class="home__title--bg">Front-end</span> developer!
             </h1>
@@ -232,7 +292,7 @@
               <span class="home__contact-link-icon far fa-comment-alt"></span
             ></a>
           </div>
-          <div class="home__col home__col--right">
+          <div class="section__col home__col--right">
             <div class="img"></div>
           </div>
         </div>
@@ -242,24 +302,132 @@
       </div>
       <section id="projects" class="projects ">
         <div class="content">
-          <div class="home__col home__col--left">
+          <div class="section__col home__col--left">
             <div class="img2"></div>
           </div>
-          <div class="home__col home__col--right">
-            <h3>
-              I am working currently as a Front-end developer at Polsource
-            </h3>
-            <p>I have experience with creating buissness interfaces</p>
-            <p>
-              I was working for company such like <b>AMD</b>, <b>Radius</b> or
+          <div class="section__col home__col--right">
+            <p class="projects-title border-bottom">
+              Mechatronics engiennier addicted to creating things, begien from
+              creting and programming
+              <a href="https://www.youtube.com/?gl=PL&hl=pl" target="_blank"
+                >robots </a
+              >robots, trough programmable microcontroller devices to coding web
+              apps and web sites. Big fun of ReactJS.
+            </p>
+            <p class="projects-title">
+              Currently I am working as a Front-end developer at Polsource in
+              Lublin. I have experience with creating business interfaces, I was
+              working on projects for companies such like <b>AMD</b>,
+              <b>Radius</b> or
               <b>DFE Pharma</b>
             </p>
           </div>
         </div>
       </section>
-      <section id="aboutMe" class="aboutMe "></section>
-      <section id="contact" class="contact "></section>
+      <section id="aboutMe" class="aboutMe ">
+        <h3 class="sample-projects__header">My projects samples</h3>
+      </section>
+      <section id="contact" class="projects-list">
+        <div class="content">
+          <div class="section__col home__col--left">
+            <div class="img3"></div>
+          </div>
+          <div class="section__col home__col--right">
+            <h3>Bill tracker</h3>
+            <p>
+              Web application for storing bills, managing them and tracing them.
+              App allows and help to get know everything about your spending
+              monay habits!
+            </p>
+            <p>
+              You can easyli add bills with or without specific information -
+              its up to You, also You can delete or edit exisitng bills. You can
+              watch your weekly monthly and yearly stats. Whole data is stored
+              in databse.
+            </p>
+            <h4>Used technology and tools</h4>
+            <ul>
+              <li>ReactJS</li>
+              <li>Redux</li>
+              <li>MaterialUI</li>
+              <li>Firebase</li>
+              <li>NPM</li>
+              <li>Git</li>
+            </ul>
+          </div>
+          <button>Code</button><button>Live</button>
+        </div>
+      </section>
+      <section id="contact" class="projects-list">
+        <div class="content">
+          <div class="section__col home__col--right">
+            <h3>Mental math gym</h3>
+            <p>
+              Web application for storing bills, managing them and tracing them.
+              App allows and help to get know everything about your spending
+              monay habits!
+            </p>
+            <p>
+              You can easyli add bills with or without specific information -
+              its up to You, also You can delete or edit exisitng bills. You can
+              watch your weekly monthly and yearly stats. Whole data is stored
+              in databse.
+            </p>
+            <h4>Used technology and tools</h4>
+            <ul>
+              <li>ReactJS</li>
+              <li>Redux</li>
+              <li>SCSS</li>
+              <li>Firebase</li>
+              <li>NPM</li>
+              <li>Git</li>
+            </ul>
+          </div>
+          <button>Code</button><button>Live</button>
+          <div class="section__col home__col--left">
+            <div class="img3"></div>
+          </div>
+        </div>
+      </section>
+      <section id="contact" class="projects-list">
+        <div class="content">
+          <div class="section__col home__col--left">
+            <div class="img3"></div>
+          </div>
+          <div class="section__col home__col--right">
+            <h3>Google keep clone</h3>
+            <p>
+              Web application for storing bills, managing them and tracing them.
+              App allows and help to get know everything about your spending
+              monay habits!
+            </p>
+            <p>
+              You can easyli add bills with or without specific information -
+              its up to You, also You can delete or edit exisitng bills. You can
+              watch your weekly monthly and yearly stats. Whole data is stored
+              in databse.
+            </p>
+            <h4>Used technology and tools</h4>
+            <ul>
+              <li>ReactJS</li>
+              <li>Redux</li>
+              <li>Styled components</li>
+              <li>Firebase</li>
+              <li>NPM</li>
+              <li>Git</li>
+            </ul>
+          </div>
+          <button>Code</button><button>Live</button>
+        </div>
+      </section>
     </main>
-    <footer class="content"></footer>
+    <span class="far fa-caret-square-up back-arrow fa-3x"></span>
+    <footer class="content">
+      <!-- <a
+        style="width: 0px; height: 0px;"
+        href="https://pl.freepik.com/darmowe-zdjecie-wektory/biznes"
+        >Biznes plik wektorowy utworzone przez vvstudio - pl.freepik.com</a
+      > -->
+    </footer>
   </body>
 </html>
