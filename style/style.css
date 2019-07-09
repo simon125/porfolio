@@ -172,7 +172,6 @@ header {
 }
 .home__contact-link {
   background: #5785c3;
-  /* border: 4px solid #2a4e98; */
   color: #fff;
   margin-top: 30px;
   padding: 13px 27px;
@@ -289,16 +288,33 @@ header {
   padding: 8px 0px;
   margin: 0 7px;
   width: 150px;
-  color: #2a4e98;
+  color: #5785c3;
   background: transparent;
   font-size: 18px;
   font-weight: bold;
   letter-spacing: 0.3px;
   text-align: center;
   text-transform: uppercase;
-  border: 3px solid #2a4e98;
+  border: 3px solid #5785c3;
   border-radius: 4px;
   text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+.projects-list__project-link--layer {
+  width: 100%;
+  height: 100%;
+  background: #5785c3;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  transition: transform 0.1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.projects-list__project-link:hover .projects-list__project-link--layer {
+  transform: translateX(-100%);
 }
 .projects-list__tech-and-links--wrapper {
   display: flex;
